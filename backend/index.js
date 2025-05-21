@@ -6,11 +6,18 @@ const express = require('express')
 const app = express()
 const port = 5000
 
+const allowedOrigins = [
+  'http://localhost:3000',
+  'https://synergysquad123.vercel.app'
+];
+
 app.use(cors({
-  origin: 'https://synergysquad.onrender.com', // Allow requests from your frontend
-  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'], // Specify allowed methods
-  allowedHeaders: ['Content-Type', 'auth-token'], // Specify allowed headers
+  origin: allowedOrigins,
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'auth-token'],
+  credentials: true
 }));
+
 app.use(express.json())
 
 // Available Routes
