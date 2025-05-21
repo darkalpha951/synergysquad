@@ -30,7 +30,7 @@ const ProblemSection: React.FC = () => {
     },
     {
       icon: <TimerIcon size={28} />,
-      title: "Produce Spoilage",
+      title: "Improper Handling of Harvest",
       description: "Without proper cold storage and timely transport, up to 30% of harvested produce spoils before reaching the market."
     },
     {
