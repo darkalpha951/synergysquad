@@ -7,7 +7,7 @@ const app = express()
 const port = 5000
 
 app.use(cors({
-  origin: 'http://localhost:5173', // Allow requests from your frontend
+  origin: 'https://synergysquad.onrender.com', // Allow requests from your frontend
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'], // Specify allowed methods
   allowedHeaders: ['Content-Type', 'auth-token'], // Specify allowed headers
 }));
