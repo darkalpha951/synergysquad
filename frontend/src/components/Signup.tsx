@@ -22,7 +22,7 @@ const Signup: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     // Handle signup logic here
-    const response = await fetch("http://localhost:5000/api/auth/create-users", {
+    const response = await fetch("https://synergysquad.onrender.com/api/auth/create-users", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
