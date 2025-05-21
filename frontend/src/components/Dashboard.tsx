@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  Truck, Package, MapPin, Bell, BarChart3, Snowflake, 
-  FileText, Map, DollarSign, Settings, LogOut, Users,
-  ChevronRight, AlertTriangle, CheckCircle, Clock
+  Truck, Package, Bell, BarChart3, Snowflake, FileText, Map, DollarSign, Settings, LogOut, Users, CheckCircle, Clock
 } from 'lucide-react';
 import { toast, Toaster } from 'sonner';
 import { format } from 'date-fns';
@@ -49,7 +47,7 @@ interface SidebarProps {
   onRoleSwitch: () => void;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ role, onRoleSwitch }) => {
+const Sidebar: React.FC<SidebarProps> = ({ role }) => {
     const navigate = useNavigate()
   const farmerLinks = [
     { icon: <Package size={20} />, label: 'Post Load' },
@@ -68,8 +66,7 @@ const Sidebar: React.FC<SidebarProps> = ({ role, onRoleSwitch }) => {
 
   const links = role === 'farmer' ? farmerLinks : transporterLinks;
 
-  const handleLogout = (e) => {
-    e.preventDefault();
+  const handleLogout = () => {
     localStorage.removeItem('token');
     toast.success('Logged out successfully');
     navigate("/")

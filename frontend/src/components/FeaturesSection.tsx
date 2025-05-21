@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, Truck, Thermometer, Bone as Drone, BarChart, Cloud, Database, Leaf } from 'lucide-react';
+import { Brain, Truck, Thermometer, Bone as Drone, Cloud, Database, Leaf } from 'lucide-react';
 
 interface FeatureCardProps {
   icon: React.ReactNode;
