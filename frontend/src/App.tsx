@@ -11,7 +11,7 @@ import Onboarding from './components/Onboarding';
 function App() {
   useEffect(() => {
     // Update page title
-    document.title = "Synergy Squad - Smart Agri Transport";
+    document.title = "UpajTransit - Smart Agri Transport";
 
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
