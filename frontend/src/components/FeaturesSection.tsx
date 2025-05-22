@@ -44,20 +44,20 @@ const FeaturesSection: React.FC = () => {
       bgColor: "bg-white",
       iconColor: "bg-amber-600"
     },
-    {
-      icon: <Drone size={28} className="text-white" />,
-      title: "Drone Delivery for Remote Areas",
-      description: "Last-mile delivery using drones for hard-to-reach farms, ensuring all farmers have access to transport solutions.",
-      bgColor: "bg-white",
-      iconColor: "bg-red-600"
-    },
-    {
-      icon: <Database size={28} className="text-white" />,
-      title: "Blockchain-Backed Carbon Credits",
-      description: "Tracking and rewarding eco-friendly transport choices with verifiable carbon credits on a transparent blockchain.",
-      bgColor: "bg-white",
-      iconColor: "bg-green-600"
-    },
+    // {
+    //   icon: <Drone size={28} className="text-white" />,
+    //   title: "Drone Delivery for Remote Areas",
+    //   description: "Last-mile delivery using drones for hard-to-reach farms, ensuring all farmers have access to transport solutions.",
+    //   bgColor: "bg-white",
+    //   iconColor: "bg-red-600"
+    // },
+    // {
+    //   icon: <Database size={28} className="text-white" />,
+    //   title: "Blockchain-Backed Carbon Credits",
+    //   description: "Tracking and rewarding eco-friendly transport choices with verifiable carbon credits on a transparent blockchain.",
+    //   bgColor: "bg-white",
+    //   iconColor: "bg-green-600"
+    // },
     {
       icon: <Cloud size={28} className="text-white" />,
       title: "Solar-Powered Cold Storage",

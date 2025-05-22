@@ -15,7 +15,7 @@ function Home() {
             <SolutionSection />
             <FeaturesSection />
             <AnalysisSection />
-            <TeamSection />
+            {/* <TeamSection /> */}
             <Footer />
         </>
     )
