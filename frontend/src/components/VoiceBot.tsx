@@ -158,7 +158,8 @@ export default function VoiceBot() {
             </div>
 
             <p className="text-xs text-gray-500 mt-4 text-center">
-              Click the mic to ask your question by voice
+              <b>Click the mic to ask your question by voice</b>
+                <p>For queries: +91-1800-123-4567</p>
             </p>
           </div>
         </div>
