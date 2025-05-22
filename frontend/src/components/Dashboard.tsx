@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  Truck, Package, Bell, BarChart3, Snowflake, FileText, Map, DollarSign, Settings, LogOut, Users, CheckCircle, Clock
+  Truck, Bell, Map, DollarSign, Settings, LogOut, Users, CheckCircle, Clock
 } from 'lucide-react';
 import { toast, Toaster } from 'sonner';
 import { format } from 'date-fns';
@@ -50,19 +50,19 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ role }) => {
     const navigate = useNavigate()
   const farmerLinks = [
-    { icon: <Package size={20} />, label: 'Post Load' },
-    { icon: <FileText size={20} />, label: 'Active Requests' },
-    { icon: <BarChart3 size={20} />, label: 'Market Info' },
-    { icon: <Snowflake size={20} />, label: 'Cold Storage' },
-    { icon: <Users size={20} />, label: 'Government Schemes' },
+    {
+        icon: <Users size={20} />,
+        label: 'Government Schemes',
+        url: 'https://www.india.gov.in/spotlight/pradhan-mantri-krishi-sinchai-yojana',
+    },
   ];
 
   const transporterLinks = [
-    { icon: <Map size={20} />, label: 'Available Loads' },
-    { icon: <Truck size={20} />, label: 'Current Jobs' },
-    { icon: <DollarSign size={20} />, label: 'Income Summary' },
-    { icon: <Settings size={20} />, label: 'Vehicle Info' },
-  ];
+  { icon: <Map size={20} />, label: 'Available Loads', url: undefined },
+  { icon: <Truck size={20} />, label: 'Current Jobs', url: undefined },
+  { icon: <DollarSign size={20} />, label: 'Income Summary', url: undefined },
+  { icon: <Settings size={20} />, label: 'Vehicle Info', url: undefined },
+];
 
   const links = role === 'farmer' ? farmerLinks : transporterLinks;
 
@@ -85,14 +85,22 @@ const Sidebar: React.FC<SidebarProps> = ({ role }) => {
         <div className="mb-8">
           <div className="text-sm font-medium text-gray-400 mb-4">MENU</div>
           {links.map((link, index) => (
-            <button
-              key={index}
-              className="flex items-center space-x-2 text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 p-2 rounded-lg w-full mb-2 transition-colors"
-            >
-              {link.icon}
-              <span>{link.label}</span>
-            </button>
-          ))}
+                <button
+                    key={index}
+                    onClick={() => {
+                    if (link.url) {
+                        window.open(link.url, '_blank');
+                    } else {
+                        toast(`Clicked on ${link.label}`); // Replace with internal logic if needed
+                    }
+                    }}
+                    className="flex items-center space-x-2 text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 p-2 rounded-lg w-full mb-2 transition-colors"
+                >
+                    {link.icon}
+                    <span>{link.label}</span>
+                </button>
+            ))}
+
         </div>
       </div>
 
