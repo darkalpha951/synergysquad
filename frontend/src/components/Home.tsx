@@ -4,6 +4,7 @@ import SolutionSection from './SolutionSection';
 import FeaturesSection from './FeaturesSection';
 import AnalysisSection from './AnalysisSection';
 import Footer from './Footer';
+import VoiceBot from './VoiceBot';
 
 function Home() {
      
@@ -14,7 +15,7 @@ function Home() {
             <SolutionSection />
             <FeaturesSection />
             <AnalysisSection />
-            {/* <TeamSection /> */}
+            <VoiceBot />
             <Footer />
         </>
     )

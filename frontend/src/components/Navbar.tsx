@@ -26,11 +26,9 @@ const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Problem', href: '#problem' },
-    { name: 'Solution', href: '#solution' },
-    { name: 'Features', href: '#features' },
-    { name: 'Analysis', href: '#analysis' },
+    { name: 'Home', href: '/' },
+    { name: 'VoiceLink', href: '/voicelink' },
+    { name: 'Onboarding', href: '/onboarding' },
     { name: 'Login', href: './login' },
   ];
 
@@ -44,7 +42,7 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <Sprout className="h-8 w-8 text-emerald-600" />
-            <span className="ml-2 text-xl font-bold text-emerald-800">Synergy Squad</span>
+            <span className="ml-2 text-xl font-bold text-emerald-800">UpajTransit</span>
           </div>
 
           {/* Desktop Navigation */}

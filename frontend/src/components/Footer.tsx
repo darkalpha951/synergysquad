@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
           <div>
             <div className="flex items-center mb-4">
               <Sprout className="h-8 w-8 text-emerald-400" />
-              <span className="ml-2 text-xl font-bold">Synergy Squad</span>
+              <span className="ml-2 text-xl font-bold">UpajTransit</span>
             </div>
             <p className="text-gray-400 mb-4">
               Revolutionizing agricultural transport for small and marginal farmers through innovative technology solutions.
@@ -73,11 +73,11 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               <li className="text-gray-400">
                 <span className="block">Email:</span>
-                <a href="mailto:info@synergysquad.com" className="hover:text-white transition-colors duration-200">info@synergysquad.com</a>
+                <a href="mailto:info@upajtransit.com" className="hover:text-white transition-colors duration-200">info@upajtransit.com</a>
               </li>
               <li className="text-gray-400">
                 <span className="block">Phone:</span>
-                <a href="tel:+1234567890" className="hover:text-white transition-colors duration-200">+1 (234) 567-890</a>
+                <a href="tel:+91 98764 78394" className="hover:text-white transition-colors duration-200">+91 98764 78293</a>
               </li>
               <li className="text-gray-400">
                 <span className="block">Address:</span>
@@ -93,12 +93,12 @@ const Footer: React.FC = () => {
         
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} Synergy Squad. All rights reserved.
+            &copy; {new Date().getFullYear()} UpajTransit. All rights reserved.
           </p>
           <div className="flex items-center">
             <span className="text-gray-400 text-sm mr-2">Made with</span>
             <Heart className="h-4 w-4 text-red-500 mx-1" />
-            <span className="text-gray-400 text-sm">by Synergy Squad</span>
+            <span className="text-gray-400 text-sm">by UpajTransit</span>
           </div>
           <button 
             onClick={scrollToTop}

@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import Dashboard from './components/Dashboard';
+import VoiceLink from './components/VoiceLink';
+import Onboarding from './components/Onboarding';
 
 function App() {
   useEffect(() => {
@@ -69,6 +71,8 @@ function App() {
                     </div>
                 }
                 ></Route>
+                <Route path='/voicelink' element={<VoiceLink />}></Route>
+                <Route path='/onboarding' element={<Onboarding />}></Route>
             </Routes>
         </Router>
     </div>
