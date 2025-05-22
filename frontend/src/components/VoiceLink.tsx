@@ -3,7 +3,8 @@ import { Phone, ExternalLink, Mic, MessageCircle, Volume2, Users, Truck, IndianR
 
 const VoiceLink: React.FC = () => {
   const supportPhoneNumber = "+91-1800-123-4567";
-  const governmentPortalUrl = "https://www.india.gov.in/topics/agriculture";
+//   const governmentPortalUrl = "https://www.india.gov.in/topics/agriculture";
+  const governmentPortalUrl = "https://www.india.gov.in/spotlight/pradhan-mantri-krishi-sinchai-yojana";
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100">

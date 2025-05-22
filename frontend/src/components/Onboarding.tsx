@@ -4,7 +4,8 @@ import { Phone, ExternalLink, Mic, Users } from 'lucide-react';
 const Onboarding: React.FC = () => {
   const supportPhoneNumber1 = "+91 98764 78293";
   const supportPhoneNumber2 = "+91 72919 31320";
-  const governmentPortalUrl = "https://www.india.gov.in/topics/agriculture";
+//   const governmentPortalUrl = "https://www.india.gov.in/topics/agriculture";
+  const governmentPortalUrl = "https://www.india.gov.in/spotlight/pradhan-mantri-krishi-sinchai-yojana";
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100">
