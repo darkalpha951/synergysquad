@@ -34,7 +34,7 @@ export default function VoiceBot() {
     const recognition = new SpeechRecognition();
     recognition.lang = 'en-US';
     recognition.interimResults = false;
-    recognition.continuous = false;
+    recognition.continuous = true;
 
     recognition.onstart = () => {
       setBotState('listening');
