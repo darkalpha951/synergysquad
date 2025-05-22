@@ -77,7 +77,7 @@ const Sidebar: React.FC<SidebarProps> = ({ role }) => {
       <div className="p-4 border-b">
         <div className="flex items-center space-x-2">
           <Truck className="text-emerald-600" size={24} />
-          <span className="font-semibold text-lg">Synergy Squad</span>
+          <span className="font-semibold text-lg">UpajTransit</span>
         </div>
       </div>
       
