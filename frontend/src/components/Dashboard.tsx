@@ -6,6 +6,7 @@ import { toast, Toaster } from 'sonner';
 import { format } from 'date-fns';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { useNavigate } from 'react-router-dom';
+import VoiceBot from './VoiceBot';
 
 // Mock data for market prices
 const marketData = [
@@ -54,6 +55,10 @@ const Sidebar: React.FC<SidebarProps> = ({ role }) => {
         icon: <Users size={20} />,
         label: 'Government Schemes',
         url: 'https://www.india.gov.in/spotlight/pradhan-mantri-krishi-sinchai-yojana',
+    },
+    {
+        icon: <Users size={20} />,
+        label: 'Community',
     },
   ];
 
@@ -336,6 +341,7 @@ const Dashboard: React.FC = () => {
     <div className="flex min-h-screen bg-gray-50">
       <Sidebar role={role} onRoleSwitch={handleRoleSwitch} />
       <DashboardContent role={role} />
+      <VoiceBot />
     </div>
   );
 };

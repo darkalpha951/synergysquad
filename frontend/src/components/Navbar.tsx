@@ -33,6 +33,7 @@ const Navbar: React.FC = () => {
   ];
 
   return (
+    <>
     <nav 
       className={`fixed w-full z-50 transition-all duration-300 ${
         isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
@@ -46,7 +47,7 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -58,6 +59,19 @@ const Navbar: React.FC = () => {
                 {link.name}
               </a>
             ))}
+            {/* Translate Button for Desktop */}
+            <button
+                onClick={() => {
+                    const el = document.getElementById('google_translate_element');
+                    if (el) el.style.display = el.style.display === 'none' ? 'block' : 'none';
+                }}
+                className={`font-medium transition-colors duration-200 ${
+                    isScrolled ? 'text-gray-700 hover:text-emerald-600' : 'text-white hover:text-emerald-300'
+                }`}
+                >
+                Translate
+            </button>
+
             <Link
                 to="contact"
                 smooth={true}
@@ -106,6 +120,8 @@ const Navbar: React.FC = () => {
         )}
       </div>
     </nav>
+    <div id="google_translate_element" style={{ display: 'none' }} className="fixed top-16 right-4 z-50 bg-white p-2 rounded shadow" />
+    </>
   );
 };
 
