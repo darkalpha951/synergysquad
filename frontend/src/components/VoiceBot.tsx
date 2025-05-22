@@ -2,7 +2,17 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { Mic, MicOff, Volume2, Bot, X } from 'lucide-react';
-
+const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+type SpeechRecognition = typeof SpeechRecognition;
+type SpeechRecognitionEvent = Event & {
+  results: {
+    [index: number]: {
+      [index: number]: {
+        transcript: string;
+      };
+    };
+  };
+};
 type BotState = 'idle' | 'listening' | 'processing' | 'speaking';
 
 export default function VoiceBot() {
@@ -14,7 +24,7 @@ export default function VoiceBot() {
 
   useEffect(() => {
     const SpeechRecognition =
-      window.SpeechRecognition || (window as any).webkitSpeechRecognition;
+      (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
 
     if (!SpeechRecognition) {
       alert('Speech Recognition is not supported in this browser.');
@@ -57,7 +67,7 @@ export default function VoiceBot() {
       }
     };
 
-    recognition.onerror = event => {
+    recognition.onerror = (event: Event) => {
       console.error('Speech recognition error', event);
       setBotState('idle');
     };
