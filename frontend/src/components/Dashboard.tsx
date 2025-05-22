@@ -60,6 +60,10 @@ const Sidebar: React.FC<SidebarProps> = ({ role }) => {
         icon: <Users size={20} />,
         label: 'Community',
     },
+    {
+        icon: <Users size={20} />,
+        label: 'Root Optimization',
+    },
   ];
 
   const transporterLinks = [
